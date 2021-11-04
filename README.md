@@ -2,7 +2,7 @@
 Teste da funcionalidade adicionar produto ao carrinho
 
 # observações:
-É sempre bom ter o node.js e java instaldo na maquina para poder rodas todas as dependencias  
+É sempre bom ter o node.js e java instaldo na maquina para poder rodas todas as dependências  
 node:  https://nodejs.org/pt-br/download/   
 java:  https://www.java.com/pt-BR/download/ie_manual.jsp?locale=pt_BR
 
