@@ -12,11 +12,13 @@ class LiveloHeaderLocator(object):
     # está com um elemento engessado mas apenas para teste
     INPUT_SEARCH = 'input-search'
 
+
 class LiveloHeaderPage(Browser):
+
+
     def search_for_product(self):
-        #wait = WebDriverWait(self.driver, 10, poll_frequency=0.5)
+        # pesquisa pelo termo berço
         search = self.wait.until(ec.element_to_be_clickable((By.ID,(LiveloHeaderLocator.INPUT_SEARCH))))
-        #>>> search = self.driver.find_element(By.ID, (LiveloHeaderLocator.INPUT_SEARCH))
         search.click()
-        search.send_keys('BERÇO', Keys.ENTER)
+        search.send_keys('berço', Keys.ENTER)
 

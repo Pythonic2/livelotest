@@ -15,5 +15,5 @@ class LiveloHomePage(Browser):
 
 
     def coockies(self):
-        self.driver.implicitly_wait(5)
-        self.driver.find_element(By.XPATH,('//*[@id="btn-authorizeCoookies"]')).click()
+        self.find_until_element((By.XPATH, ('//*[@id="btn-authorizeCoookies"]'))).click()
+

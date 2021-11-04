@@ -8,7 +8,7 @@ class Browser(object):
     options.add_experimental_option('excludeSwitches', ['enable-logging'])
     # Inicia o browser chrome
     driver = webdriver.Chrome(options=options)
-    wait = WebDriverWait(driver, 10)
+    wait = WebDriverWait(driver, 20)
     # Define o tempo máximo para carregamento da página
     driver.set_page_load_timeout(30)
     # Maximiza a janela do browser ao ser iniciado

@@ -7,10 +7,15 @@ from nose.tools import assert_equals
 
 
 livelohomepage = LiveloHomePage()
+
 liveloheaderpage = LiveloHeaderPage()
+
 lilevoproductspage = LiveloProductsPage()
+
 lilevocartpage = LilevoCartPage()
 
+
+""" steps do bdd """
 
 @given(u'que acesso a página da lilevo')
 def step_impl(context):
