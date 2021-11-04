@@ -3,7 +3,8 @@ from pages.livelo_home_page import LiveloHomePage
 from pages.lilevo_header_page import LiveloHeaderPage
 from pages.lilevo_products_page import LiveloProductsPage
 from pages.lilevo_cart_page import LilevoCartPage
-from nose.tools import assert_true
+from nose.tools import assert_equals
+
 
 livelohomepage = LiveloHomePage()
 liveloheaderpage = LiveloHeaderPage()
@@ -41,4 +42,4 @@ def step_impl(context):
 
 @then(u'devo visualizar o produto no carrinho')
 def step_impl(context):
-   assert_true(lilevocartpage.get_text_cart())
+   assert_equals(lilevocartpage.get_text_cart,'Seu carrinho')

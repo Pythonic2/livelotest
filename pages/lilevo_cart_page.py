@@ -12,9 +12,7 @@ class LiveloCartLocator(object):
 
 class LilevoCartPage(Browser):
 
-
+    @property
     def get_text_cart(self):
-        self.driver.implicitly_wait(5)
-        textoElement = self.driver.find_element(By.ID,('CC-cart-list'))
-        ver = bool(textoElement)
-        return ver
+        textoElement = self.find_until_element((By.XPATH,('//*[@id="CC-cart-list"]/div[1]/h1')))
+        return textoElement.get_attribute('innerText').strip()
