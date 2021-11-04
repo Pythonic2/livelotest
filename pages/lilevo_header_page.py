@@ -3,7 +3,7 @@ from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as ec
 from browser import Browser
 from selenium.webdriver.common.keys import Keys
-from time import sleep
+
 
 class LiveloHeaderLocator(object):
     # Seletor do elementos utilizados na página
@@ -17,4 +17,4 @@ class LiveloHeaderPage(Browser):
         search = self.driver.find_element(By.ID, (LiveloHeaderLocator.INPUT_SEARCH))
         search.click()
         search.send_keys('BERÇO', Keys.ENTER)
-        sleep(10)
+

@@ -3,7 +3,7 @@ from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as ec
 from browser import Browser
 
-from time import sleep
+
 class LiveloProductsLocator(object):
     # Seletor do elementos utilizados na página
     # está com um elemento engessado mas apenas para teste
@@ -11,21 +11,32 @@ class LiveloProductsLocator(object):
     BOTAO_ADD_TO_CART = '//*[@id="cc-prodDetails-addToCart"]'
     BOTAO_NAO_QUERO_DESCONTO = 'cc-prodDetails-refusePriceClubeDiscount' #id
 
+
+
 class LiveloProductsPage(Browser):
     def choose_product(self):
-        wait = WebDriverWait(self.driver, 10)
+        #espera até 20s
+        wait = WebDriverWait(self.driver, 20)
+        #retorna o elemento achado
         element = wait.until(ec.element_to_be_clickable((By.XPATH, (LiveloProductsLocator.PRODUTO))))
-        prod = self.driver.find_element(By.XPATH, (LiveloProductsLocator.PRODUTO)).get_attribute('href')
-        self.driver.get(prod)
-    def add_to_cart(self):
-        wait = WebDriverWait(self.driver, 15, poll_frequency=0.5)
-        element = wait.until(ec.element_to_be_clickable((By.XPATH, (LiveloProductsLocator.BOTAO_ADD_TO_CART))))
-        add = self.driver.find_element(By.XPATH, (LiveloProductsLocator.BOTAO_ADD_TO_CART))
-        add.click()
-        sleep(10)
-    def dont_want_discount(self):
-        wait = WebDriverWait(self.driver, 15, poll_frequency=0.5)
-        element = wait.until(ec.element_to_be_clickable((By.ID, (LiveloProductsLocator.BOTAO_NAO_QUERO_DESCONTO))))
-        disc = self.driver.find_element(By.ID, (LiveloProductsLocator.BOTAO_NAO_QUERO_DESCONTO))
-        disc.click()
 
+        #pega o link do produto
+        self.driver.get(element.get_attribute('href'))
+
+
+    def add_to_cart(self):
+        # espera até 20s
+        wait = WebDriverWait(self.driver, 20)
+        # retorna o elemento achado
+        element = wait.until(ec.element_to_be_clickable((By.XPATH, (LiveloProductsLocator.BOTAO_ADD_TO_CART))))
+        #clica no elemento
+        self.driver.find_element(By.XPATH, (LiveloProductsLocator.BOTAO_ADD_TO_CART)).click()
+
+
+    def dont_want_discount(self):
+        # espera até 20s
+        wait = WebDriverWait(self.driver, 20)
+        # retorna o elemento achado
+        element = wait.until(ec.element_to_be_clickable((By.ID, (LiveloProductsLocator.BOTAO_NAO_QUERO_DESCONTO))))
+        # clica no elemento
+        self.driver.find_element(By.ID, (LiveloProductsLocator.BOTAO_NAO_QUERO_DESCONTO)).click()
