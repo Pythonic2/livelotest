@@ -20,5 +20,6 @@ class LiveloHeaderPage(Browser):
         # pesquisa pelo termo berço
         search = self.wait.until(ec.element_to_be_clickable((By.ID,(LiveloHeaderLocator.INPUT_SEARCH))))
         search.click()
-        search.send_keys('berço', Keys.ENTER)
+        search.send_keys('berço') # poderia mandar o Keys.ENTER aqui mas n apareceria termo de pesquisa (muito rapido)
+        search.send_keys(Keys.ENTER)
 
