@@ -12,6 +12,7 @@ class LiveloProductsLocator(object):
     # está com elementos engessado mas apenas para teste
 
     PRODUTO = '//*[@id="CC-product-grid-title-LVL202887-04"]' # XPATH
+
     BOTAO_ADD_TO_CART = '//*[@id="cc-prodDetails-addToCart"]' #XPATH
 
     BOTAO_NAO_QUERO_DESCONTO = 'cc-prodDetails-refusePriceClubeDiscount' #ID
