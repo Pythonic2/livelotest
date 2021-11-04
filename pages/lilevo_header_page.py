@@ -4,6 +4,7 @@ from selenium.webdriver.support import expected_conditions as ec
 from browser import Browser
 from selenium.webdriver.common.keys import Keys
 
+
 '''Header da Página'''
 
 
