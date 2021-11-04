@@ -14,6 +14,7 @@ lilevocartpage = LilevoCartPage()
 @given(u'que acesso a página da lilevo')
 def step_impl(context):
     livelohomepage.acess_page('https://www.livelo.com.br/')
+    livelohomepage.coockies()
 
 
 @given(u'que preencho o campo de pesquisa com Berço')
