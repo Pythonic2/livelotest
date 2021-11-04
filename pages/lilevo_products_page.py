@@ -3,6 +3,8 @@ from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as ec
 from browser import Browser
 
+'''Páginia relacionada a produtos '''
+
 
 class LiveloProductsLocator(object):
     # Seletor do elementos utilizados na página

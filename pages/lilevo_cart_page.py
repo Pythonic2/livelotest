@@ -1,6 +1,8 @@
 from selenium.webdriver.common.by import By
 from browser import Browser
 
+'''Pagina do carrinho'''
+
 
 class LiveloCartLocator(object):
     # Seletor do elementos utilizados na página

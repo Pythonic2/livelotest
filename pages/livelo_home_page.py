@@ -4,6 +4,8 @@ from selenium.webdriver.support import expected_conditions as ec
 from browser import Browser
 
 
+'''Pagina inicial'''
+
 
 class LiveloHomePage(Browser):
     def get_element(self, locator):
