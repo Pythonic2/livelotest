@@ -11,9 +11,9 @@ class LiveloProductsLocator(object):
 
     # está com elementos engessado mas apenas para teste
 
-    PRODUTO = '//*[@id="CC-product-grid-title-LVL202887-04"]' # XPATH
+    PRODUTO = 'CC-product-list-name-LVL202887-00' # ID
 
-    BOTAO_ADD_TO_CART = '//*[@id="cc-prodDetails-addToCart"]' #XPATH
+    BOTAO_ADD_TO_CART = 'cc-prodDetails-addToCart' # ID
 
     BOTAO_NAO_QUERO_DESCONTO = 'cc-prodDetails-refusePriceClubeDiscount' #ID
 
@@ -23,13 +23,13 @@ class LiveloProductsPage(Browser):
 
     def choose_product(self):
         # Navega para a pagina do produto
-        element = self.find_until_element((By.XPATH, (LiveloProductsLocator.PRODUTO)))
-        self.driver.get(element.get_attribute('href'))
+        self.find_until_element((By.ID, (LiveloProductsLocator.PRODUTO))).click()
+
 
 
     def add_to_cart(self):
         # clica no botao adicionar produto ao carrinho
-        self.find_until_element((By.XPATH, (LiveloProductsLocator.BOTAO_ADD_TO_CART))).click()
+        self.find_until_element((By.ID, (LiveloProductsLocator.BOTAO_ADD_TO_CART))).click()
 
 
     def dont_want_discount(self):

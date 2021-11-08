@@ -7,7 +7,7 @@ from browser import Browser
 class LiveloCartLocator(object):
     # Seletor do elementos utilizados na página
 
-    TEXT_CART = '//*[@id="CC-cart-list"]/div[1]/h1'
+    TEXT_CART = '//div/div/h1'
 
 
 class LilevoCartPage(Browser):

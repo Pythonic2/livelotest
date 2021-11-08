@@ -10,7 +10,7 @@ from selenium.webdriver.common.keys import Keys
 class LiveloHeaderLocator(object):
     # Seletor do elementos utilizados na página
     # está com um elemento engessado mas apenas para teste
-    INPUT_SEARCH = 'input-search'
+    INPUT_SEARCH = 'input-search' #ID
 
 
 class LiveloHeaderPage(Browser):
